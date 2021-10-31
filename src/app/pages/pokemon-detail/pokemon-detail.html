@@ -1,0 +1,49 @@
+<div class="pokemon">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="pokemon-img">
+                    <img src="{{pokemon.img}}">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="pokemon-detail">
+                    <div class="pokemon-detail-title mt-2 mb-4">{{pokemonspecies.descricao}}</div>
+                    <div class="pokemon-detail-version"></div>
+                    <div class="pokemon-detail-characteristics">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h5>Altura</h5>
+                                <p>{{pokemon.altura}} m</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <h5>Categoria</h5>
+                                <p>0.7 m</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h5>Peso</h5>
+                                <p>{{pokemon.peso}} m</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <h5>Habilidades</h5>
+                                <p *ngFor="let habilidade of pokemon.habilidades">{{habilidade}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h5>Gênero</h5>
+                                <p>0.7 m</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pokemon-detail-Type mt-5">
+                        <h5 class="pokemon-detail-Type-title">Tipo</h5>
+                        <app-type-pokemon [types]="pokemon.types"></app-type-pokemon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

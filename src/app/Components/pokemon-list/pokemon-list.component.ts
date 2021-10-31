@@ -17,8 +17,7 @@ export class PokemonListComponent implements OnInit {
       response.results.forEach((result: { name: String; }) => {
       this.service.getPokemon(result.name)
       .subscribe((response:any) => {
-          this.pokemons.push(response);
-          console.log(this.pokemons);
+          this.pokemons.push(response); 
           
       })
     });
