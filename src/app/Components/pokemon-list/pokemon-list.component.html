@@ -1,7 +1,6 @@
-<div class="card-container  mx-auto mt-5" routerLink="/pokemon">
-    <div class="card border-0 m-2 mx-auto m-2 p-0" *ngFor="let pokemon of pokemons">
-        <div class="card-body">
-            <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
-        </div>
+<div class="card-container  mx-auto " infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+    <div class="border-0 m-2 mx-auto m-2 p-0" *ngFor="let pokemon of pokemons">
+        <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
     </div>
 </div>
+<!-- <div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()"></div> -->

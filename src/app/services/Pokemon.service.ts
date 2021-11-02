@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class PokemonService {
   constructor(private http: HttpClient) {}
 
-  getPokemons() {
-    return this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=10?raw=true`);
+  getPokemons(limit:Number = 2,index:number = 0 ) {
+    return this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&raw=true&offset=${index}`);
   }
 
   getPokemon(name:String){

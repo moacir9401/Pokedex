@@ -1,19 +1,46 @@
 
 @import ../../_variables.sass
+.card    
+    background: transparent
+    border: none
+    margin: 3px
+    border: solid .1rem #353232
+    box-shadow: .3px .3px 5px #333
+    transition: all .3s
+    cursor: pointer
+    &:hover
+        border: solid .1rem #eee
+        box-shadow: .3px .3px 5px #eee
 
+    .card-body
+        padding: 0rem 0rem 1rem
+        
 .card-pokemon
+    width: 14rem
+    padding: 1rem 1rem
+    transition: all .3s
+    &:hover
+        padding: 0rem 0rem
     .card-img
-        background: $bg-primary
+        background: url('../../../assets/pokebola.jpeg') 
+        background-size: cover
+        background-position: center 
         img
             width: 100%
-    .card-body
+    .card-detail
+        background: $bg-primary
+        padding: 1rem 1rem
+        margin: 1rem 0rem
+        border-radius: .3rem
         .card-title
             font-family: $font-default
             font-size: 80%
             color: $color-primary
+            text-shadow: 1px 1px 3px #333
 
         .card-text
-                font-family: $font-default
-                color: $color-second
-                text-transform: none
-                font-size: 145%
+            font-family: $font-default
+            color: $color-second
+            text-transform: none
+            font-size: 145%
+            text-shadow: 1px 1px 3px #333

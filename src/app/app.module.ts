@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TypePokemonComponent } from './Components/type-pokemon/type-pokemon.component';
 import { PokemonDetailComponent } from './pages/pokemon-detail/pokemon-detail';
 import { MainComponent } from './pages/main/main.component'; 
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MainComponent } from './pages/main/main.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
